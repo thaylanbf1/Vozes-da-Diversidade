@@ -1,0 +1,124 @@
+.hero{
+    background: linear-gradient(135deg, #667eea 0%, #764a76 100% );
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.hero-content{
+    max-width: 800px;
+    margin-bottom: 2rem;
+}
+
+.hero-content h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero-content p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: .9;
+}
+
+.hero-buttons{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 9px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    align-items: center;
+    width: 100%;
+    transition: all 0.3s ease;
+    max-width: 400px;
+    
+}
+
+
+.btn-primary{
+    background-color: white;
+    color: #764a76;
+}
+
+.btn-primary:hover{
+   transform: translateY(-2px);
+   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+   background-color: #764a76;
+   color: white;
+}
+
+.btn-secondary{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover{
+    background-color: white;
+    color: #764a76;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.security-badge{
+   display: flex;
+   align-items: center;
+   gap: .5rem;
+   margin-top: 1rem;
+   padding: 1rem;
+   background-color: rgba(255, 255, 255, 0.1);
+   border-radius: 8px;
+   font-size: .9rem;
+   max-width: 500px;
+}  
+
+.security-badge span{
+    text-align: left;
+}
+
+@media (max-whidth: 768px) {
+    .hero{
+        padding: 3rem 1rem;
+        min-height: 50vh;
+    }
+
+    .hero-content h1{
+        font-size: 1.8rem;
+    }
+
+    .hero-content p{
+        font-size: 1rem;
+    }
+
+    .btn{
+        font-size: .9rem;
+        padding: .8rem 1.5rem;
+    }
+
+    .security-badge{
+        font-size: .8rem;
+        padding: .75rem;
+    }
+}

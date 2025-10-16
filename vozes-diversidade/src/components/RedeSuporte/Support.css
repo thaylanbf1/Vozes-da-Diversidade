@@ -1,0 +1,104 @@
+.support-network {
+ background-color: #f8f9fa;
+ padding: 4rem 2rme;
+ min-height: 50vh;
+ margin-top: 2rem;
+}
+
+.support-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.support-container h2{
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.support-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.support-card{
+    background: linear-gradient(135deg, #667eea94 0%, #764ba2a1 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.support-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.support-icon{
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.support-card h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.support-card p{
+    font-size: 1rem;
+    color: white;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.support-card button{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin-top: 1.7rem;
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.support-card button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+@media (max-whidth: 768px) {
+    .support-network {
+        padding: 3rem 1rem;
+    }
+
+    .support-container h2{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .support-cards{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .support-card{
+        padding: 1.5rem;
+    }
+}

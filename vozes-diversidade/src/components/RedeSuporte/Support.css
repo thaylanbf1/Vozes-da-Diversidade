@@ -1,5 +1,4 @@
 .support-network {
- background-color: #f8f9fa;
  padding: 4rem 2rme;
  min-height: 50vh;
  margin-top: 2rem;
@@ -12,7 +11,9 @@
 
 .support-container h2{
     font-size: 2rem;
-    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: transparent;
+    background-clip: text;
     margin-bottom: 3rem;
     text-align: center;
 }

@@ -4,7 +4,7 @@ import {Shield, Heart, FileText} from 'lucide-react'
 
 const Sobre = () => {
   return (
-    <section className="about">
+    <section id='about' className="about">
         <div className="about-container">
             <p className="about-intro">"<span>Vozes da Diversidade</span>" surgiu do projeto de extensão da Universidade do Estado do Pará - UEPA, que visa combater a violência e a descriminação contra a comunidade LGBTQIA+ em Ananindeua e regiões proximas, oferecendo um ambiente seguro, confidencial e acolhedor.</p>
 

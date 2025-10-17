@@ -12,6 +12,9 @@ const Form = () => {
         location: '',
         wantsSupport: false,
         contactMethod: '',
+        contactEmail: '',
+        contactPhone: '',
+        contactPreferredTime: ''
     })
 
     const handleNext= () => {
@@ -30,6 +33,14 @@ const Form = () => {
         const protocol = math.random().toString(36).substring(2, 10).toUpperCase();
         alert(`Denûncia enviado com sucesso! Seu protocolo é: ${protocol}`);
         // reset form
+
+        if(formData.wantsSupport){
+            message += `\n\nVocê solicitou contato via ${
+                formData.contactMethod === 'email' ? 'Email' :
+                formData.contactMethod === 'phone' ? 'Telefone/WhatsApp' :
+                'Atendimento Presencial'
+            }.\n\nNossa equipe entrará em contato em breve.`;
+        }
         setFormData({
             occurenceType: [],
             description: '',
@@ -37,6 +48,9 @@ const Form = () => {
             location: '',
             wantsSupport: false,
             contactMethod: '',
+            contactEmail: '',
+            contactPhone: '',
+            contactPreferredTime: ''
         });
         setStep(1);
     }
@@ -52,7 +66,7 @@ const Form = () => {
         
 
   return (
-    <section className="report-form-section">
+    <section  className="report-form-section">
         <div className="form-container">
             <div className="form-header">
                 <h2>Fazer denúncia Anônima</h2>
@@ -156,7 +170,13 @@ const Form = () => {
                             <label htmlFor="" className="checkbox-label">
                                 <input type="checkbox"
                                 checked={formData.wantsSupport}
-                                onChange={(e) => setFormData({...formData, wantsSupport: e.target.checked})}
+                                onChange={(e) => setFormData({...formData, wantsSupport: e.target.checked,
+                                contactMethod: '',
+                                contactEmail: '',
+                                contactPhone: '',
+                                contactPreferredTime: ''
+
+                                })}
                                 />
                                 <span> Desejo ser contatado pela rede de apoio</span>
                             </label>
@@ -166,23 +186,100 @@ const Form = () => {
                             </p>
                         </div>
                         {formData.wantsSupport && (
-                            <div className="form-group">
-                                <label>Método de Contato Preferido*</label>
-                                <select
-                                value={formData.contactMethod}
-                                onChange={(e) => setFormData({...formData, contactMethod: e.target.value})}
-                                >
+                            <>
+                                <div className="form-group">
+                                    <label>Como prefere ser contatado? *</label>
+                                    <select 
+                                    value={formData.contactMethod}
+                                    onChange={(e) => setFormData({
+                                        ...formData, 
+                                        contactMethod: e.target.value, 
+                                        contactEmail: '', 
+                                        contactPhone: ''
+                                    })}
+                                    required={formData.wantsSupport}
+                                    >
                                     <option value="">Selecione uma opção</option>
-                                    <option value="email">Email anônimo</option>
-                                    <option value="telefone">Telefone / WhatsApp</option>    
-                                    <option value="outro">Presencial</option>
-                                </select>
-                                <p className="help-text">
-                                    Escolha o método pelo qual você prefere ser contatado. Garantimos que sua privacidade será respeitada.
-                                </p>
-                            </div>
-                           
+                                    <option value="email">E-mail anônimo</option>
+                                    <option value="phone">Telefone/WhatsApp</option>
+                                    <option value="inperson">Presencial</option>
+                                    </select>
+                                </div>
+
+                                {formData.contactMethod === 'email' && (
+                                    <div className="form-group">
+                                    <label>Seu E-mail *</label>
+                                    <input 
+                                        type="email"
+                                        placeholder="seuemail@exemplo.com"
+                                        value={formData.contactEmail}
+                                        onChange={(e) => setFormData({...formData, contactEmail: e.target.value})}
+                                        required
+                                    />
+                                    <p className="helper-text">
+                                        Seu e-mail será usado apenas para contato da equipe de apoio. Não será compartilhado.
+                                    </p>
+                                    </div>
+                                )}
+
+                                {formData.contactMethod === 'phone' && (
+                                    <div className="form-group">
+                                    <label>Seu Telefone/WhatsApp *</label>
+                                    <input 
+                                        type="tel"
+                                        placeholder="(91) 98765-4321"
+                                        value={formData.contactPhone}
+                                        onChange={(e) => setFormData({...formData, contactPhone: e.target.value})}
+                                        required
+                                    />
+                                    <p className="helper-text">
+                                        Inclua DDD. Entraremos em contato via ligação ou WhatsApp conforme sua preferência.
+                                    </p>
+                                    </div>
+                                )}
+
+                                {formData.contactMethod === 'inperson' && (
+                                    <>
+                                    <div className="security-notice">
+                                        <AlertCircle size={20} />
+                                        <p>
+                                        Nossa equipe entrará em contato para agendar um horário de atendimento presencial em local seguro.
+                                        Por favor, forneça um telefone ou e-mail para agendamento.
+                                        </p>
+                                    </div>
+                                    
+                                    <div className="form-group">
+                                        <label>E-mail ou Telefone para agendamento *</label>
+                                        <input 
+                                        type="text"
+                                        placeholder="E-mail ou telefone"
+                                        value={formData.contactEmail}
+                                        onChange={(e) => setFormData({...formData, contactEmail: e.target.value})}
+                                        required
+                                        />
+                                    </div>
+                            </>
                         )}
+
+                    {formData.contactMethod && (
+                        <div className="form-group">
+                        <label>Horário preferencial para contato (Opcional)</label>
+                        <select 
+                            value={formData.contactPreferredTime}
+                            onChange={(e) => setFormData({...formData, contactPreferredTime: e.target.value})}
+                        >
+                            <option value="">Qualquer horário</option>
+                            <option value="morning">Manhã (8h às 12h)</option>
+                            <option value="afternoon">Tarde (12h às 18h)</option>
+                            <option value="evening">Noite (18h às 21h)</option>
+                        </select>
+                        <p className="helper-text">
+                            Ajuda-nos a escolher o melhor momento para entrar em contato
+                        </p>
+                        </div>
+                    )}
+                </>
+              )}
                         <div className="welcome-message">
                         <h3>Quase lá!</h3>
                             <p>Revise suas respostas e, quando estiver pronto, envie sua denúncia. Lembre-se: você pode deixar qualquer campo em branco. O mais importante é sua segurança.</p>

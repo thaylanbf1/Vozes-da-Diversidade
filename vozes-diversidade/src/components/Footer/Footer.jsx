@@ -22,7 +22,7 @@ const Footer = () => {
                     <h3>Links úteis</h3>
                     <a href="#about">Sobre o Projeto</a>
                     <a href="#support">Rede de Suporte</a>
-                    <a href="#Form">Denuncie</a>
+                    <a href="#info">Informações</a>
                 </div>
 
                 <div className="footer-section">

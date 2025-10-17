@@ -24,10 +24,10 @@
     font-weight: bold;
     cursor: pointer;
     transition: opacity .3s;
-    font-family: 'Lobster', sans-serif;
+    font-family: 'Lobster Two', sans-serif;
 }
 .logo span{
-    background: linear-gradient(135deg, #ff0000  10%, #ffa500 39%, #ff0 47%, #008000 55%, #00f 66%, #800080 88%);
+    background: linear-gradient(135deg, #ff0000  8%, #ffa500 39%, #ff0 50%, #008000 60%, #00f 70%, #800080 90%);
     background-clip: text;
     color: transparent;
 }

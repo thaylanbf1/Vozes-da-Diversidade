@@ -35,7 +35,7 @@ const Infos = () => {
 
     
   return (
-    <section className='section-diversity'>
+    <section id='info' className='section-diversity'>
         {/* Seção LGBTQIA+ */}
             <div className="info-container">
                 <h2>Informações sobre a Comunidade LGBTQIA+</h2>

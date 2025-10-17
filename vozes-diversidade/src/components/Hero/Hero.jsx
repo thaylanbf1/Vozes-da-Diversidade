@@ -12,7 +12,7 @@ const Hero = ({onNavigate}) => {
         <div className="hero-buttons">
             <button className='btn btn-primary' onClick={() => onNavigate('report')}>
                 <Shield size={20} /> 
-                Fazer denúncia Anônima
+                Fazer Denúncia Anônima
             </button>
             <button className='btn btn-secondary' onClick={() => onNavigate('support')}>
                 <Heart size={20} />

@@ -6,7 +6,7 @@ const Support = () => {
        alert(`Funcionalidade "${type}" será implementada em breve.`);
     }
   return (
-    <section className='support-network'>
+    <section id='support' className='support-network'>
       <div className="support-container">
         <h2>Rede de Apoio Multidisciplinar</h2>
 

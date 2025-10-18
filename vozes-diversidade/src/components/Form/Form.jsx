@@ -125,7 +125,7 @@ const Form = () => {
                             onChange={(e) => setFormData({...formData, description: e.target.value})}
                             ></textarea>
                             <p className="help-text">
-                                Compartilhe detalhes importantes, como o que foi dito ou feito, quem estava envolvido e qualquer outra informação relevante. Não há obrigaoriedade de fornecer detalhes que possam identificar você.
+                                Compartilhe detalhes importantes, como o que foi dito ou feito, quem estava envolvido e qualquer outra informação relevante. Não há obrigaoriedade de fornecer detalhes que possam identificar você. Aqui você pode detalhar a se a violeência sofrida foi presenciada sou sofrida por você.
                             </p>
                         </div>
 

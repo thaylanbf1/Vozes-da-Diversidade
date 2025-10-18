@@ -27,8 +27,11 @@ const Footer = () => {
 
                 <div className="footer-section">
                     <h3>Recursos</h3>
-                        <a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/lgbt/publicacoes/cartilhas?utm_source=chatgpt.com" target='_blank'>Materiais Educativos</a>
+                        <a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/lgbt" target='_blank'>Materiais Educativos</a>
                         <a href="https://direitoshumanos.dpu.def.br/legislacao-lgbtqiamais/?utm_source=chatgpt.com" target='_blank'>Legislação</a>
+                        <a href="https://www.youtube.com/watch?v=5Ryp4n4frXU" target='_blank'>Webnar Educativo</a>
+                        <a href="https://open.spotify.com/show/1C0emyD7TIVCUGS3HQaSIA?utm_source=chatgpt.com" target='_blank'>Podcast(Spotify)</a>
+                        <a href="https://www.gov.br/mdh/pt-br/assuntos/noticias/2024/outubro/depoimentos-de-violacoes-e-defesa-dos-direitos-humanos-marcam-audiencia-do-gt-memoria-e-verdade-lgbtqia-no-ceara?utm_source=chatgpt.com" target='_blank'>Depoimentos</a>
                 </div>
 
                 <div className="footer-section">

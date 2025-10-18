@@ -97,7 +97,7 @@ const Form = () => {
                         <div className="form-group">
                             <label>Tipo de Ocorrência*</label>
                             <div className="checkbox-group">
-                                {['Violência Fisica', 'Violência Psicologica', 'Assedio', 'Discriminacao', 'Ameaça', 'Outro'].map((type) => (
+                                {['Violência Fisica', 'Violência Psicologica', 'Assédio', 'Discriminação', 'Ameaça', 'Outro'].map((type) => (
                                     <label key={type} className="checkbox-item">
                                         <input
                                             type="checkbox"
@@ -146,7 +146,7 @@ const Form = () => {
                     <div className="form-step active">
                         <div className="form-group">
                             <label>Local da Ocorrência*</label>
-                            <input type="text" placeholder="Onde a ocorrencia aconteceu? (cidade, estado. bairro ou nome do local)"
+                            <input type="text" placeholder="Onde a ocorrência aconteceu? (cidade, estado. bairro ou nome do local)"
                             value={formData.location}
                             onChange={(e) => setFormData({...formData, location: e.target.value})}
                             />

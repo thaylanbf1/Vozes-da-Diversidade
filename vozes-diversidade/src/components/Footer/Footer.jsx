@@ -27,10 +27,8 @@ const Footer = () => {
 
                 <div className="footer-section">
                     <h3>Recursos</h3>
-                        <a href="#faq">Perguntas Frequentes</a>
-                        <a href="#materiais">Materiais Educativos</a>
-                        <a href="#legislacao">Legislação</a>
-                        <a href="#contato">Contato Institucional</a>
+                        <a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/lgbt/publicacoes/cartilhas?utm_source=chatgpt.com" target='_blank'>Materiais Educativos</a>
+                        <a href="https://direitoshumanos.dpu.def.br/legislacao-lgbtqiamais/?utm_source=chatgpt.com" target='_blank'>Legislação</a>
                 </div>
 
                 <div className="footer-section">

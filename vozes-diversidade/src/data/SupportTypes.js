@@ -77,3 +77,17 @@ export const infosDireitos = [
         content: 'É importante que todas as pessoas tenham acesso à justiça e possam buscar reparação em casos de violação de seus direitos.'
     }
 ]
+export const infosLgbtfobia = [
+    {
+        title: 'Como identificar a LGBTfobia',
+        content: 'A LGBTfobia se manifesta de várias formas, desde piadas e comentários que ridicularizam pessoas LGBTQIA+, até exclusão ou tratamento desigual por orientação sexual ou identidade de gênero. Também inclui agressões verbais ou físicas motivadas pelo preconceito, assim como microagressões sutis que reforçam estereótipos. Reconhecer esses sinais é o primeiro passo para combatê-la.'
+    },
+    {
+        title: 'Quebrando falsos mitos',
+        content: 'Existem muitos mitos sobre a comunidade LGBTQIA+, como a ideia de que ser LGBTQIA+ é uma escolha, que casais do mesmo sexo não formam famílias reais ou que pessoas trans estão “confusas” sobre sua identidade. Na verdade, a orientação sexual e a identidade de gênero são naturais, famílias LGBTQIA+ oferecem amor e cuidado como qualquer outra, e pessoas trans têm sua identidade real e legítima.'
+    },
+    {
+        title: 'Informações verídicas sobre a comunidade',
+        content: 'A comunidade LGBTQIA+ é diversa, englobando várias orientações sexuais e identidades de gênero. Infelizmente, seus integrantes enfrentam mais discriminação e violência, tornando essencial políticas de proteção e inclusão. Apoiar a comunidade significa respeitar seus direitos, usar os pronomes corretos e combater o preconceito no dia a dia.'
+    }
+]

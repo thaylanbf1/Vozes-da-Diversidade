@@ -53,7 +53,7 @@ const Footer = () => {
             <div className="footer-bottom">
                 <p>
                     &copy; {new Date().getFullYear()} Vozes da Diversidade.
-                    desenvolvido por <strong>Thaylan Fonseca</strong>, <strong>Driele Carvalho</strong> e <strong>Filipe Cruz</strong>. Todos os direitos reservados. 
+                    Desenvolvido por <strong>Thaylan Fonseca</strong>, <strong>Driele Carvalho</strong> e <strong>Filipe Cruz</strong>. Todos os direitos reservados. 
                 </p>
             </div>
         </div>

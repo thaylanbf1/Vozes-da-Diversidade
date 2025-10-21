@@ -387,8 +387,63 @@
 }
 
 @media (max-width: 768px) {
+   .report-form-section{
+        padding: 2rem 1rem;
+    }
+
     .form-container{
-        padding:2rem 1.5rem;
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .form-header h2{
+        font-size: 1.5rem;
+    }
+
+    .progress-bar{
+        margin-bottom: 2rem;
+    }
+
+    .progress-step{
+        width: 25px;
+        height: 25px;
+        font-size: 0.875rem;
+    }
+
+    .success-modal{
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .success-modal h2{
+        font-size: 1.5rem;
+    }
+
+    .success-icon{
+        width: 60px;
+        height: 60px;
+    }
+
+    .success-icon svg{
+        width: 36px;
+        height: 36px;
+    }
+
+    .protocol-number{
+        font-size: 2rem;
+    }
+
+    .protocol-box{
+        padding: 1.5rem;
+    }
+
+    .support-confirmation{
+        padding: 1rem;
+    }
+
+    .btn-close{
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
     }
 
     .form-actions{
@@ -399,5 +454,20 @@
     .btn-next,
     .btn-submit{
         width: 100%;
+        justify-content: center;
+    }
+
+    .checkbox-item{
+        padding: 0.625rem;
+        font-size: 0.9rem;
+    }
+
+    .security-notice{
+        flex-direction: column;
+        padding: 0.875rem;
+    }
+
+    .welcome-message{
+        padding: 1.5rem;
     }
 }

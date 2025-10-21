@@ -6,6 +6,8 @@ import { ChevronRight, Lock, AlertCircle } from "lucide-react"
 const Form = () => {
 
     const [step, setStep] = useState(1);
+    const [showMessage, setShowMessage] = useState(false)
+    const [protocolNumber, setProtocolNumber] = useState('')
     const [formData, setFormData] = useState({
         occurenceType: '',
         description: '',
@@ -17,9 +19,6 @@ const Form = () => {
         contactPhone: '',
         contactPreferredTime: '',
     })
-
-    const [showMessage, setShowMessage] = useState(false);
-    const [protocolNumber, setProtocolNumber] = useState('');
 
     const handleNext= () => {
         if (step < 4) {
@@ -85,6 +84,59 @@ const handleSubmit = async () => {
 
   return (
     <section  className="report-form-section">
+        {/* mensagem sucesso */}
+        {showMessage && (
+            <div className="success-overlay">
+                <div className="success-modal">
+                    <div className="success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <h2>Denúncia Enviada com Sucesso!</h2>
+                    <div className="protocol-box">
+                        <p>Seu número de protocolo é: </p>
+                        <div className="protocol-number">#{protocolNumber}</div>
+                        <p className="protocol-instruction">Guarde este número em um local seguro!</p>
+                    </div>
+
+                    {formData.wantsSupport && (
+                        <div className="support-confirmation">
+                            <p>
+                                Você solicitou contato via <strong>
+                                    {formData.contactMethod === 'email' ? 'E-mail' : formData.contactMethod === 'phone' ? 'Telefone/WhatsApp' : 'Atendimento Presencial'}
+                                </strong>
+                            </p>
+                            <p className="support-message">
+                                Nossa equipe entrará em contato em breve
+                            </p>
+                        </div>
+                    )}
+
+                    <button className="btn-close" onClick={() => {
+                        setShowMessage(false)
+                        setFormData({
+                            occurrenceType: [],
+                            description: '',
+                            date: '',
+                            location: '',
+                            wantsSupport: false,
+                            contactMethod: '',
+                            contactEmail: '',
+                            contactPhone: '',
+                            contactPreferredTime: ''
+                        })
+                        setStep(1)
+                    }}>
+                        Fechar
+                    </button>
+
+                    <p className="auto-close">Esta janela se fechará automaticamente em alguns segundos</p>
+                </div>
+            </div>
+        )}
+
+
         <div className="form-container">
             <div className="form-header">
                 <h2>Fazer denúncia Anônima</h2>

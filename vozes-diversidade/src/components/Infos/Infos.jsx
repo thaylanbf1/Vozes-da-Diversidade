@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './Infos.css'
-import { infosDiversity, infosEvitarDiscriminacao, infosLgbtqia, infosDireitos } from '../../data/SupportTypes'
+import { infosDiversity, infosEvitarDiscriminacao, infosLgbtqia, infosDireitos, infosLgbtfobia } from '../../data/SupportTypes'
 
 const Infos = () => {
     
@@ -8,28 +8,33 @@ const Infos = () => {
     const [currentTimeDiscriminacao, setCurrentTimeDiscriminacao] = useState(0);
     const [currentTimeLgbtqia, setCurrentTimeLgbtqia] = useState(0);
     const [currentTimeDireitos, setCurrentTimeDireitos] = useState(0);
+    const [currentTimeLgbtfobia, setCurrentTimeLgbtfobia] = useState(0);
 
     useEffect(() => {
         const timerDiversity = setInterval(() => {
             setCurrentTimeDiversity((prevTime) => (prevTime +1) % infosDiversity.length)
-        }, 6000);
+        }, 15000);
 
         const timerDiscriminacao =setInterval(() => {
             setCurrentTimeDiscriminacao((prevTime) => (prevTime + 1) % infosDireitos.length)
-        }, 6000);
+        }, 15000);
 
         const timerLgbt = setInterval(() => {
             setCurrentTimeLgbtqia((prevTime) => (prevTime + 1) % infosLgbtqia.length)
-        }, 6000);
+        }, 15000);
 
         const timerDireitos = setInterval(() => {
             setCurrentTimeDireitos((prevTime) => (prevTime + 1) % infosDireitos.length)
-        }, 6000)
+        }, 15000)
+        const timerLgbtfobia = setInterval(() => {
+            setCurrentTimeLgbtfobia((prevTime) => (prevTime + 1) % infosLgbtfobia.length)
+        }, 15000)
         return() => {
             clearInterval(timerDiversity)
             clearInterval(timerDiscriminacao)
             clearInterval(timerLgbt)
             clearInterval(timerDireitos)
+            clearInterval(timerLgbtfobia)
         }
     }, [])
 
@@ -112,6 +117,25 @@ const Infos = () => {
                             <button
                                 key={index}
                                 className={`infor-btn ${index === currentTimeDireitos ? 'info-btn-active' : ''}`} onClick={() => setCurrentTimeDireitos(index)}/>
+                        ))}
+                    </div>
+            </div>
+        </div>
+        {/* Secão infosLgbtfobia */}
+        <div className="info-container">
+            <h2>Entenda e Combata a LGBTfobia</h2>
+
+            <div className="info-cards">
+                <div className="info-card">
+                    <h3>{infosLgbtfobia[currentTimeLgbtfobia].title}</h3>
+                    <p>{infosLgbtfobia[currentTimeLgbtfobia].content}</p>
+                </div>
+
+                <div className="info-buttons">
+                        {infosLgbtfobia.map((_, index) => (
+                            <button
+                                key={index}
+                                className={`infor-btn ${index === currentTimeLgbtfobia ? 'info-btn-active' : ''}`} onClick={() => setCurrentTimeLgbtfobia(index)}/>
                         ))}
                     </div>
             </div>

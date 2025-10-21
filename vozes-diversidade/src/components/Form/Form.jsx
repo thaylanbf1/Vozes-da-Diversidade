@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from "react"
 import './Form.css'
 import { ChevronRight, Lock, AlertCircle } from "lucide-react"
@@ -14,8 +15,11 @@ const Form = () => {
         contactMethod: '',
         contactEmail: '',
         contactPhone: '',
-        contactPreferredTime: ''
+        contactPreferredTime: '',
     })
+
+    const [showMessage, setShowMessage] = useState(false);
+    const [protocolNumber, setProtocolNumber] = useState('');
 
     const handleNext= () => {
         if (step < 4) {
@@ -29,31 +33,46 @@ const Form = () => {
         }
     }
 
-    const handleSubmit = () => {
-        const protocol = math.random().toString(36).substring(2, 10).toUpperCase();
-        alert(`Denûncia enviado com sucesso! Seu protocolo é: ${protocol}`);
-        // reset form
+const handleSubmit = async () => {
+   const protocol = Math.random().toString(36).substring(2, 10).toUpperCase();
+  
+  // Dados que vamos enviar para o backend
+  const dataToSend = { ...formData, protocol };
 
-        if(formData.wantsSupport){
-            message += `\n\nVocê solicitou contato via ${
-                formData.contactMethod === 'email' ? 'Email' :
-                formData.contactMethod === 'phone' ? 'Telefone/WhatsApp' :
-                'Atendimento Presencial'
-            }.\n\nNossa equipe entrará em contato em breve.`;
-        }
-        setFormData({
-            occurenceType: [],
-            description: '',
-            date: '',
-            location: '',
-            wantsSupport: false,
-            contactMethod: '',
-            contactEmail: '',
-            contactPhone: '',
-            contactPreferredTime: ''
-        });
-        setStep(1);
+  try {
+    const response = await axios.post('http://localhost:5000/api/denuncia', dataToSend);
+
+    if (response.status === 201) {
+        setProtocolNumber(protocol);
+        setShowMessage(true);
+
+      
+      // Reset do formulário
+      setFormData({
+        occurenceType: [],
+        description: '',
+        date: '',
+        location: '',
+        wantsSupport: false,
+        contactMethod: '',
+        contactEmail: '',
+        contactPhone: '',
+        contactPreferredTime: ''
+      });
+      setStep(1);
+
+      setTimeout(() => setShowMessage(false), 8000);
+
+    } else {
+      alert('Ocorreu um erro ao enviar a denúncia. Tente novamente.');
     }
+
+  } catch (err) {
+    console.error('Erro ao enviar denúncia:', err.response || err);
+    alert('Ocorreu um erro ao enviar a denúncia. Tente novamente.');
+  }
+};
+
 
     const handleCheckBoxChange = (value) => {
         setFormData(prev =>  ({
@@ -63,7 +82,6 @@ const Form = () => {
             : [...prev.occurenceType, value]
         }))
     }
-        
 
   return (
     <section  className="report-form-section">
@@ -307,6 +325,54 @@ const Form = () => {
                     </button>
                 )}
             </div>
+
+        {/* Mensagem de sucesso */}
+    {showMessage && (
+    <div className="success-overlay">
+        <div className="success-modal">
+        <div className="success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+        </div>
+        <h2>Denúncia Enviada com Sucesso!</h2>
+
+        <div className="protocol-box">
+            <p>Seu número de protocolo é:</p>
+            <div className="protocol-number">#{protocolNumber}</div>
+            <p className="protocol-instruction">Guarde este número em um local seguro!</p>
+        </div>
+
+        {formData.wantsSupport && (
+            <div className="support-confirmation">
+            <p>
+                Você solicitou contato via <strong>
+                {formData.contactMethod === 'email' ? 'E-mail' 
+                    : formData.contactMethod === 'phone' ? 'Telefone/WhatsApp' 
+                    : 'Atendimento Presencial'}
+                </strong>
+            </p>
+            <p className="support-message">Nossa equipe entrará em contato em breve.</p>
+            </div>
+        )}
+
+        <button 
+            className="btn-close" 
+            onClick={() => {
+            setShowMessage(false);
+            window.location.href = '/'; // redireciona para a página inicial
+            }}
+        >
+            Fechar
+        </button>
+
+        <p className="auto-close">
+            Esta janela se fechará automaticamente em alguns segundos
+        </p>
+        </div>
+    </div>
+    )}
+        
         </div>
     </section>
   )

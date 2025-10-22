@@ -7,6 +7,7 @@ import Sobre from './components/Sobre/Sobre';
 import Form from './components/Form/Form';
 import Footer from './components/Footer/Footer';
 import Infos from './components/Infos/Infos';
+import HowItWorks from './components/HowItWorks/HowItWorks';
 
 
 
@@ -22,6 +23,7 @@ function App() {
             <Sobre />
             <Support />
             <Infos />
+            <HowItWorks />
 
           </>
         );
@@ -34,6 +36,7 @@ function App() {
           <>
             <Support />
             <Infos />
+            <HowItWorks />
           </>
         );
         case 'report':
@@ -47,6 +50,7 @@ function App() {
             <Sobre />
             <Support />
             <Infos />
+            <HowItWorks />
           </>
         );
     }

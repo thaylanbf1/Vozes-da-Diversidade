@@ -91,3 +91,27 @@ export const infosLgbtfobia = [
         content: 'A comunidade LGBTQIA+ é diversa, englobando várias orientações sexuais e identidades de gênero. Infelizmente, seus integrantes enfrentam mais discriminação e violência, tornando essencial políticas de proteção e inclusão. Apoiar a comunidade significa respeitar seus direitos, usar os pronomes corretos e combater o preconceito no dia a dia.'
     }
 ]
+
+export const steps = [
+    {
+        number: 1,
+        title: 'Acesse com Segurança',
+        description:'Nossa plataforma utiliza criptografia de ponta a ponta. Você pode acessar de qualquer dispositivo.'
+    },
+    {
+        number: 2,
+        title: 'Faça Sua Denúncia ou Busque Apoio',
+        description: 'Preencha o formulário com as informações que se sentir confortávl para compartilhar. Todos os campos são obrigatorios, portanto só avance após preencher todos os campos desejados.'
+    },
+    {
+        number: 3,
+        title: 'Receba um Número de Protocolo',
+        description:'Você recebera um número de protocolo para acompanhar sua denúncia. O guarde em um local seguro caso queira acompanhar o andamento.'
+    },
+    {
+        number: 4,
+        title: 'Conecte-se com Apoio',
+        description:'Campo opcional para preenchimento, se dejesar você pode solicitar contato de um psicológo. Escolha a forma de contato que preferir e forneca o seu meio de contato.'
+    }
+
+]

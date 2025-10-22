@@ -60,7 +60,7 @@ const handleSubmit = async () => {
       });
       setStep(1);
 
-      setTimeout(() => setShowMessage(false), 8000);
+      setTimeout(() => setShowMessage(false), 15000);
 
     } else {
       alert('Ocorreu um erro ao enviar a denúncia. Tente novamente.');

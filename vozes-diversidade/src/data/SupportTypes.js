@@ -17,7 +17,10 @@ export const supportTypes = [
         Icon: Users,
         title: 'Grupos de Apoio',
         description: 'Conexão com grupos de apoio para compartilhar experiências e fortalecer a rede de suporte.',
-        buttonText: 'Conhecer Recursos'
+        buttonText: 'Conhecer Recursos',
+        type: 'external',
+        url: 'https://discord.com/invite/clubofcolors'
+    
     }
 ]
 

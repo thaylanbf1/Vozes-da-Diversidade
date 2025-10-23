@@ -2,8 +2,12 @@ import './Support.css'
 import { supportTypes } from '../../data/SupportTypes' 
 
 const Support = () => {
-    const handleClick = (type) => {
-       alert(`Funcionalidade "${type}" será implementada em breve.`);
+    const handleClick = (support) => {
+      if(support.type === 'external'){
+        window.open(support.url, '_blank', 'noopener, noreferrer')
+      }else{
+       alert(`Funcionalidade "${support.title}" será implementada em breve.`);
+      }
     }
   return (
     <section id='support' className='support-network'>
@@ -20,7 +24,7 @@ const Support = () => {
                         </div>
                         <h3>{support.title}</h3>
                         <p>{support.description}</p>
-                        <button onClick={() => handleClick(support.title)}>{support.buttonText}</button>
+                        <button onClick={() => handleClick(support)}>{support.buttonText}</button>
                     </div>
                 );
             })}

@@ -8,6 +8,7 @@ import Form from './components/Form/Form';
 import Footer from './components/Footer/Footer';
 import Infos from './components/Infos/Infos';
 import HowItWorks from './components/HowItWorks/HowItWorks';
+import DashBoard from './components/PainelAdmin/DashBoard';
 
 
 
@@ -42,6 +43,11 @@ function App() {
         case 'report':
           return (
             <Form />
+          )
+
+        case 'dashboard':
+          return(
+            <DashBoard />
           )
         default:
           return (

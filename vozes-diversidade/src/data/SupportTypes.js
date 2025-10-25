@@ -49,8 +49,8 @@ export const infosLgbtqia = [
         content: 'O apoio psicológico e jurídico é crucial para o bem-estar das pessoas LGBTQIA+, ajudando a enfrentar desafios específicos relacionados à discriminação, aceitação social e direitos legais.'
     }, 
     {
-        title: 'Recursos Disponíveis',
-        content: 'Existem diversos recursos e organizações dedicadas a oferecer suporte às pessoas LGBTQIA+, incluindo linhas de apoio, grupos de suporte e serviços jurídicos especializados.'
+        title: '🌈 Significado da sigla LGBTQIA+',
+        content: 'L – Lésbicas: mulheres que se relacionam com mulheres. / G – Gays: homens que se relacionam com homens. / B – Bissexuais: atração por mais de um gênero. / T – Transgêneros: identidade de gênero diferente do sexo de nascimento. / Q – Queer/Questionando: quem desafia ou explora as normas de gênero e sexualidade. / I – Intersexo: nascem com características biológicas de ambos os sexos. / A – Assexuais/Aliados: quem não sente atração sexual ou apoia a causa. / + – Outras identidades: pansexual, não binário, agênero, entre outras.'
     }
 ]
 export const infosDiversity = [

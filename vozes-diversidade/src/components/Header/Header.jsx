@@ -23,6 +23,7 @@ const Header = ({onNavigate, currentPage}) => {
                 <span className={`nav-links ${currentPage === 'about' ? 'active' : ''}`} onClick={() => handleNavigation('about')}>Sobre</span>
                 <span className={`nav-links ${currentPage === 'support' ? 'active' : ''}`} onClick={() => handleNavigation('support')}>Rede de Apoio</span>
                 <span className={`nav-links ${currentPage === 'report' ? 'active' : ''}`} onClick={() => handleNavigation('report')}>Fazer Denúncia</span>
+                <span className={`nav-links ${currentPage === 'dashboard' ? 'active' : ''}`} onClick={() => handleNavigation('dashboard')}>Admin</span>
             </nav>
 
             <button className="menu-button" onClick={() => setMenuOpen(true)}>

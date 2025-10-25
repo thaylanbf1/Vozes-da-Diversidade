@@ -5,6 +5,13 @@ const Support = () => {
     const handleClick = (support) => {
       if(support.type === 'external'){
         window.open(support.url, '_blank', 'noopener, noreferrer')
+
+      }else if (support.type === 'email'){
+        const emailBody = encodeURIComponent(support.body || '')
+        window.location.href = `mailto:${support.email}?subject=${encodeURIComponent(support.subject || 'Solicitação de Apoio')}&body=${emailBody}`
+      }else if (support.type === 'whatsappJ'){
+        const whatsappUrl = `https://wa.me/${support.number}?text=${encodeURIComponent(support.message)}`
+        window.open(whatsappUrl, '_blank', 'noopener, noreferrer')
       }else{
        alert(`Funcionalidade "${support.title}" será implementada em breve.`);
       }

@@ -5,13 +5,28 @@ export const supportTypes = [
         Icon: Heart,
         title: 'Apoio Psicológico',
         description: 'Apoio emocional e psicológico para lidar com situações difíceis.',
-        buttonText: 'Solicitar Atendimento'
+        buttonText: 'Solicitar Atendimento',
+        type: 'email',
+        email: 'thaylan.sbd.fonseca@aluno.uepa.br',
+        subject: 'Solicitação de Orientação Juridica',
+        body: `Olá, equipe de psicologia!
+
+            Gostaria de solicitar apoio psicológico.
+
+            Vim através do site Vozes da Diversidade e gostaria de agendar uma sessão.
+
+            Aguardo retorno.
+
+            Atenciosamente.`
     },
     {
         Icon: Scale,
         title: 'Orientação Jurídica',
         description: 'Orientação legal para entender seus direitos e opções.',
-        buttonText: 'Solicitar Atendimento'
+        buttonText: 'Solicitar Atendimento',
+        type: 'whatsappJ',
+        number: '5591984490773',
+        message: 'Olá, cheguei aqui através da Plataforma Vozes da Diversidade, e gostaria de obter uma orientação Jurídica. Poderia lhe explicar minha situação?'
     },
     {
         Icon: Users,

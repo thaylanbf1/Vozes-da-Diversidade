@@ -41,6 +41,7 @@ const Header = ({onNavigate, currentPage}) => {
                 <span className='nav-link' onClick={() => handleNavigation('about')}>Sobre</span>
                 <span className='nav-link' onClick={() => handleNavigation('support')}>Rede de Apoio</span>
                 <span className='nav-link' onClick={() => handleNavigation('report')}>Fazer denuncia</span>
+                <span className='nav-link' onClick={() => handleNavigation('dashboard')}> Admin</span>
             </div>
         </div>
     </header>

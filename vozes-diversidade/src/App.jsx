@@ -36,7 +36,7 @@ function App() {
   const renderPage = () => {
 
     if(currentPage === 'dashboard' && !isAuthenticated){
-      return <Login onLoginSuccess={handleLoginSuccess} />
+      return <Login onLoginSuccess={handleLoginSuccess} onBack={() => setCurrentPage('home')} />
     }
 
     if(currentPage === 'dashboard' && isAuthenticated){

@@ -1,8 +1,8 @@
 import { useState } from "react"
-import {Lock, User, Eye, EyeOff, AlertCircle, Shield} from 'lucide-react'
+import {Lock, User, Eye, EyeOff, AlertCircle, Shield, ArrowLeft } from 'lucide-react'
 import './Login.css'
 
-const Login = ({onLoginSuccess}) => {
+const Login = ({onLoginSuccess, onBack}) => {
 
     const [formData, setFormData] = useState({
         username: '',
@@ -57,6 +57,10 @@ const Login = ({onLoginSuccess}) => {
     <div className="login-background">
         <div className="login-overlay"></div>
     </div>
+    <button onClick={onBack} className="btn-voltar">
+        <ArrowLeft size={20} />
+        Voltar
+    </button>
 
     <div className="login-card">
         <div className="login-header">

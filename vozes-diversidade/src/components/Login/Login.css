@@ -27,7 +27,26 @@
     background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255, 0.05) 35px, rgba(255,255,255, 0.05) 70px);
     opacity: 0.5;
 }
-
+.btn-voltar{
+  position: fixed;
+    top: 2rem;
+    left: 2rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #667eea;
+    border: 2px solid rgba(102, 126, 234, 0.3);
+    border-radius: 45px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 .login-card{
     background: rgba(245, 245, 245, 0.678);
     border-radius: 20px;
@@ -127,7 +146,7 @@
 }
 
 .toggle-password{
-     position: absolute;
+  position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);

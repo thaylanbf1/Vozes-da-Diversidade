@@ -189,7 +189,7 @@ const DashBoard = () => {
 
                             return(
                                 <div key={index} className="line-chart-bar">
-                                    <div className="bar-column" style={{height:`${heightPercentage }%`}} title={`${item.reports} denúncias`}>
+                                    <div className="bar-column" style={{height:`${heightPercentage}%`}} title={`${item.reports} denúncias`}>
                                         <span className="bar-value">{item.reports}</span>
                                     </div>
                                     <span className="bar-label">{item.month}</span>

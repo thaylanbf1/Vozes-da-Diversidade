@@ -10,7 +10,7 @@ export const dashboarData = {
         {type: 'Violência Psicológica', count: 335, percentage: 55.7, color: '#f59e0b'},
         {type: 'Discriminação', count: 272, percentage: 21.7, color: '#8b5cf6'},
         {type: 'Assédio', count: 156, percentage: 14.8, color: '#ec4899'},
-        {type: 'Ameaça', count: 47, percentage: 5.8, color: '#f97316'},
+        {type: 'Ameaça', count: 47, percentage: 7.8, color: '#f97316'},
     ],
 
     reportsPorMes: [

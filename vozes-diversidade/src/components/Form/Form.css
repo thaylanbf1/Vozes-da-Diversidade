@@ -223,12 +223,12 @@
     }
 }
 
-.form-group{
+.form-group-denuncia{
     margin-bottom: 1.5rem;
     
 }
 
-.form-group label{
+.form-group-denuncia label{
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
@@ -273,12 +273,12 @@
     cursor: pointer;
 }
 
-.form-group input[type="text"],
-.form-group input[type="date"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group select,
-.form-group textarea{
+.form-group-denuncia input[type="text"],
+.form-group-denuncia input[type="date"],
+.form-group-denuncia input[type="email"],
+.form-group-denuncia input[type="tel"],
+.form-group-denuncia select,
+.form-group-denuncia textarea{
     width: 100%;
     padding: 0.75rem;
     border: 2px solid #e0e0e0;
@@ -294,7 +294,7 @@
     outline: none;
 }
 
-.form-group textarea{
+.form-group-denuncia textarea{
     resize: vertical;
     min-height: 120px;
 }

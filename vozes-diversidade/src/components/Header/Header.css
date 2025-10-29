@@ -49,6 +49,21 @@
     border-radius: 4px;
 }
 
+#admin{
+    border: none;
+    border-radius:15px;
+    color: white;
+    font-weight: bold;
+    background-color: #764ba2;
+    
+    transition: all .3s;
+}
+
+#admin:hover{
+    color: #050d35;
+    box-shadow: 0 4px 20px rgba(28, 32, 85, 0.308);
+}
+
 .nav-links:hover{
     color: #050e36;
 }

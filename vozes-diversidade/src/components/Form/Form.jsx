@@ -164,7 +164,7 @@ const handleSubmit = async () => {
                             <p>Este formulário é seguro e todos os dados são criptografados e protegidos pela LGPD. Seu anonimato é garantido.</p>
                         </div>
 
-                        <div className="form-group">
+                        <div className="form-group-denuncia">
                             <label>Tipo de Ocorrência*</label>
                             <div className="checkbox-group">
                                 {['Violência Fisica', 'Violência Psicologica', 'Assédio', 'Discriminação', 'Ameaça', 'Outro'].map((type) => (
@@ -188,7 +188,7 @@ const handleSubmit = async () => {
                 {/* step 2 */}
                 {step === 2 && (
                     <div className="form-step active">
-                        <div className="form-group">
+                        <div className="form-group-denuncia">
                             <label>Descrição da Ocorrência*</label>
                             <textarea placeholder="Conte-nos o que aconteceu, com o nível de detalhe que se sentir confortável."
                             value={formData.description}
@@ -199,7 +199,7 @@ const handleSubmit = async () => {
                             </p>
                         </div>
 
-                        <div className="form-group">
+                        <div className="form-group-denuncia">
                             <label>Data da Ocorrência*</label>
                             <input  type="date"
                             value={formData.date}
@@ -214,7 +214,7 @@ const handleSubmit = async () => {
                 {/* step 3 */}
                 {step === 3 && (
                     <div className="form-step active">
-                        <div className="form-group">
+                        <div className="form-group-denuncia">
                             <label>Local da Ocorrência*</label>
                             <input type="text" placeholder="Onde a ocorrência aconteceu? (cidade, estado. bairro ou nome do local)"
                             value={formData.location}
@@ -235,7 +235,7 @@ const handleSubmit = async () => {
                 {/* step 4 */}
                 {step === 4 && (
                     <div className="form-step active">
-                        <div className="form-group">
+                        <div className="form-group-denuncia">
                             <div className="checkbox-group">
                             <label htmlFor="" className="checkbox-label">
                                 <input type="checkbox"
@@ -257,7 +257,7 @@ const handleSubmit = async () => {
                         </div>
                         {formData.wantsSupport && (
                             <>
-                                <div className="form-group">
+                                <div className="form-group-denuncia">
                                     <label>Como prefere ser contatado? *</label>
                                     <select 
                                     value={formData.contactMethod}
@@ -277,7 +277,7 @@ const handleSubmit = async () => {
                                 </div>
 
                                 {formData.contactMethod === 'email' && (
-                                    <div className="form-group">
+                                    <div className="form-group-denuncia">
                                     <label>Seu E-mail *</label>
                                     <input 
                                         type="email"
@@ -293,7 +293,7 @@ const handleSubmit = async () => {
                                 )}
 
                                 {formData.contactMethod === 'phone' && (
-                                    <div className="form-group">
+                                    <div className="form-group-denuncia">
                                     <label>Seu Telefone/WhatsApp *</label>
                                     <input 
                                         type="tel"
@@ -318,7 +318,7 @@ const handleSubmit = async () => {
                                         </p>
                                     </div>
                                     
-                                    <div className="form-group">
+                                    <div className="form-group-denuncia">
                                         <label>E-mail ou Telefone para agendamento *</label>
                                         <input 
                                         type="text"
@@ -332,7 +332,7 @@ const handleSubmit = async () => {
                         )}
 
                     {formData.contactMethod && (
-                        <div className="form-group">
+                        <div className="form-group-denuncia">
                         <label>Horário preferencial para contato (Opcional)</label>
                         <select 
                             value={formData.contactPreferredTime}

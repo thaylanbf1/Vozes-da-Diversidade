@@ -98,7 +98,7 @@
     text-align: left;
 }
 
-@media (max-whidth: 768px) {
+@media (max-width: 820px) {
     .hero{
         padding: 3rem 1rem;
         min-height: 50vh;

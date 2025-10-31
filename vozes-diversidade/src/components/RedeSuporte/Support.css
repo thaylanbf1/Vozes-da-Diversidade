@@ -84,7 +84,7 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     .support-network {
         padding: 3rem 1rem;
     }

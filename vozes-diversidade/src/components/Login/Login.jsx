@@ -95,9 +95,6 @@ const Login = ({ onLoginSuccess, onBack }) => {
                 <Lock size={16} />
                 Área Protegida - Acesso Restrito a administradores
             </p>
-            <p className="demo-credentials">
-                <strong>Demo:</strong> usuário: admin | senha: 1234
-            </p>
         </div>
       </div>
     </div>

@@ -39,16 +39,6 @@ const DashBoard = ({ onLogout }) => {
             <Download size={20} />
             Baixar Relatório
           </button>
-          <button className="btn-logout" onClick={onLogout} style={{
-              padding: '8px 12px',
-              backgroundColor: '#ef4444',
-              color: '#fff',
-              cursor: 'pointer',
-              border: 'none',
-              borderRadius: '4px'
-          }}>
-              Sair
-          </button>
         </div>
       </div>
 

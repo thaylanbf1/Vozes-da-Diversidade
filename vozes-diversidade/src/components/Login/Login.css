@@ -245,24 +245,9 @@
   margin-bottom: 1rem;
 }
 
-.demo-credentials {
-  background: #f0f9ff;
-  border: 1px solid #bae6fd;
-  color: #0c4a6e;
-  padding: 0.75rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  line-height: 1.5;
-  margin-top: .5rem;
-}
-
-.demo-credentials strong {
-  font-weight: 700;
-  color: #0369a1;
-}
 
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .login-container {
     padding: 1rem;
   }

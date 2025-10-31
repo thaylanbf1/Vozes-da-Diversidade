@@ -263,123 +263,8 @@
 
 }
 
-.city-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
 
-.city-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background: #f8f9fa;
-  border-radius: 8px;
-  border-left: 4px solid #667eea;
-}
-
-.city-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.city-rank {
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-.city-info strong {
-  color: #333;
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-.city-info p {
-  color: #666;
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.critical-badge {
-  background: #fee2e2;
-  color: #dc2626;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.insights-section {
-  margin-top: 2rem;
-}
-
-.insights-section h2 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 1.5rem;
-}
-
-.insights-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.insight-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  border-left: 4px solid;
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.insight-card.priority-high {
-  border-color: #ef4444;
-}
-
-.insight-card.priority-high svg {
-  color: #ef4444;
-}
-
-.insight-card.priority-medium {
-  border-color: #f59e0b;
-}
-
-.insight-card.priority-medium svg {
-  color: #f59e0b;
-}
-
-.insight-card h4 {
-  font-size: 1.1rem;
-  color: #333;
-  margin: 0 0 0.5rem 0;
-}
-
-.insight-card p {
-  color: #666;
-  line-height: 1.6;
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-.insight-card strong {
-  color: #333;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .dashboard-container {
     padding: 1rem;
   }
@@ -424,9 +309,5 @@
 
   .bar-value {
     font-size: 0.75rem;
-  }
-
-  .insights-grid {
-    grid-template-columns: 1fr;
   }
 }

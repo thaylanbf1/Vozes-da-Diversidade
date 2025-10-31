@@ -1,51 +1,33 @@
-import { useState, useEffect } from "react"
-import {User, LogOut} from 'lucide-react'
-import './Protetction.css'
-import DashBoard from "../PainelAdmin/DashBoard"
+import { useEffect, useState } from "react";
+import api from "../../../backend/src/services/api"; 
+import DashBoard from "../../components/PainelAdmin/DashBoard";
 
-const Protection = ({onLogout}) => {
+const Protection = ({ onLogout }) => {
+  const [loading, setLoading] = useState(true);
+  const [authorized, setAuthorized] = useState(false);
 
-    const [adminUser, setAdminUser] = useState('')
-
-    useEffect(() => {
-        const user  = localStorage.getItem('adminUser')
-        setAdminUser(user || 'Admin')
-    }, [])
-
-    const handleLogout = () =>{
-        if(window.confirm('Tem certeza que deseja sair do painel administrativo?')){
-            localStorage.removeItem('isAdminAuthenticated')
-            localStorage.removeItem('adminUser')
-            onLogout()
-        }
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      setAuthorized(false);
+      setLoading(false);
+      return;
     }
 
-  return (
-   
-      <div className="protected-dashboard-wrapper">
-        {/* barra superior com a info do admin */}
-        <div className="admin-topbar">
-            <div className="admin-info">
-                <div className="admin-avatar">
-                    <User size={20} />
-                </div>
+    api.get("/dashboard", { headers: { Authorization: `Bearer ${token}` } })
+      .then(() => setAuthorized(true))
+      .catch(() => {
+        localStorage.removeItem("token");
+        setAuthorized(false);
+      })
+      .finally(() => setLoading(false));
+  }, []);
 
-                <div className="admin-details">
-                    <span className="admin-name">{adminUser}</span>
-                    <span className="admin-role">Administrador</span>
-                </div>
-            </div>
+  if (loading) return <p>Carregando...</p>;
 
-            <button className="btn-logout" onClick={handleLogout}>
-                <LogOut size={18} />
-                Sair
-            </button>
-        </div>
-        <DashBoard />
+  if (!authorized) return <p>Não autorizado. Faça login novamente.</p>;
 
-      </div>
-    
-  )
-}
+  return <DashBoard onLogout={onLogout} />;
+};
 
-export default Protection
+export default Protection;

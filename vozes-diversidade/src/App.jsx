@@ -1,6 +1,6 @@
-import './App.css'
-import { useState , useEffect} from 'react'
-import Header from './components/Header/Header'
+import './App.css';
+import { useState, useEffect } from 'react';
+import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Support from './components/RedeSuporte/Support';
 import Sobre from './components/Sobre/Sobre';
@@ -8,39 +8,38 @@ import Form from './components/Form/Form';
 import Footer from './components/Footer/Footer';
 import Infos from './components/Infos/Infos';
 import HowItWorks from './components/HowItWorks/HowItWorks';
-import Protection from './components/DashboardProtected/Protection';
 import Login from './components/Login/Login';
-
+import Protection from './components/DashboardProtected/Protection';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    const authStatus = localStorage.getItem('isAdminAuthenticated')
-    setIsAuthenticated(authStatus === 'true')
-  }, [])
+    const token = localStorage.getItem('token');
+    setIsAuthenticated(!!token);
+  }, []);
 
   const handleLoginSuccess = () => {
-    setIsAuthenticated(true)
-    localStorage.setItem('isAdminAuthenticated', 'true')
-  }
+    setIsAuthenticated(true);
+    setCurrentPage('dashboard');
+  };
 
   const handleLogout = () => {
-    setIsAuthenticated(false)
-    localStorage.removeItem('isAdminAuthenticated')
-    localStorage.removeItem('adminUser')
-    setCurrentPage('home')
-  }
+    setIsAuthenticated(false);
+    localStorage.removeItem('token');
+    localStorage.removeItem('adminUser');
+    localStorage.removeItem('isAdminAuthenticated');
+    setCurrentPage('home');
+  };
 
   const renderPage = () => {
-
-    if(currentPage === 'dashboard' && !isAuthenticated){
-      return <Login onLoginSuccess={handleLoginSuccess} onBack={() => setCurrentPage('home')} />
+    if (currentPage === 'dashboard' && !isAuthenticated) {
+      return <Login onLoginSuccess={handleLoginSuccess} onBack={() => setCurrentPage('home')} />;
     }
 
-    if(currentPage === 'dashboard' && isAuthenticated){
-      return <Protection onLogout={handleLogout} />
+    if (currentPage === 'dashboard' && isAuthenticated) {
+      return <Protection onLogout={handleLogout} />;
     }
 
     switch (currentPage) {
@@ -52,13 +51,10 @@ function App() {
             <Support />
             <Infos />
             <HowItWorks />
-
           </>
         );
       case 'about':
-        return (
-          <Sobre />
-        );
+        return <Sobre />;
       case 'support':
         return (
           <>
@@ -67,12 +63,10 @@ function App() {
             <HowItWorks />
           </>
         );
-        case 'report':
-          return (
-            <Form />
-          )
-        default:
-          return (
+      case 'report':
+        return <Form />;
+      default:
+        return (
           <>
             <Hero onNavigate={setCurrentPage} />
             <Sobre />
@@ -82,19 +76,19 @@ function App() {
           </>
         );
     }
-  }
+  };
+
   return (
     <div className="App">
-      {/* so mostra a heeder e footer se não estiver na tela de login/dashvoard */}
       {!(currentPage === 'dashboard') && (
-        <Header onNavigate={setCurrentPage} currentPage={currentPage}/>
+        <Header onNavigate={setCurrentPage} currentPage={currentPage} />
       )}
-      <main className='main-content'>
+      <main className="main-content">
         {renderPage()}
       </main>
-      {!(currentPage === 'dashboard') && <Footer />} 
+      {!(currentPage === 'dashboard') && <Footer />}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

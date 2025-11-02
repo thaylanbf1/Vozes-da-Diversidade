@@ -151,7 +151,7 @@ const DashBoard = () => {
         <div>
           <h1>Painel Administrativo</h1>
         </div>
-        <div style={{ display: "flex", gap: "10px" }}>
+        <div>
           <button onClick={downloadImage} className="btn-download">
             <Download size={20} />
             Imagem

@@ -70,8 +70,6 @@ const Login = ({ onLoginSuccess, onBack }) => {
                   onChange={(e) => setPassword(e.target.value)}
                   required autoComplete="current-password"
                 />
-                <button type="button" className="toggle-password" onClick={() => setShowPassword(!showPassword)} tabIndex={-1}>{showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-                </button>
             </div>
           </div>
 

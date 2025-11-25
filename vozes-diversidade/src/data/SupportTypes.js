@@ -41,15 +41,15 @@ export const supportTypes = [
 
 export const infosLgbtqia = [
     {
-        title: 'O que significa LGBTQIA+?',
-        content: 'LGBTQIA+ é uma sigla que representa diversas identidades de gênero e orientações sexuais, incluindo Lésbicas, Gays, Bissexuais, Transgêneros, Queer, Intersexuais, Assexuais e outras variações.'
+        title: 'O que significa LGBTQIAPN+?',
+        content: 'LGBTQIAPN+ é uma sigla que representa diversas identidades de gênero e orientações sexuais, incluindo Lésbicas, Gays, Bissexuais, Transgêneros, Queer, Intersexuais, Assexuais e outras variações.'
     },
     {
         title: 'Importância do Apoio',
         content: 'O apoio psicológico e jurídico é crucial para o bem-estar das pessoas LGBTQIA+, ajudando a enfrentar desafios específicos relacionados à discriminação, aceitação social e direitos legais.'
     }, 
     {
-        title: '🌈 Significado da sigla LGBTQIA+',
+        title: '🌈 Significado da sigla LGBTQIAPN+',
         content: 'L – Lésbicas: mulheres que se relacionam com mulheres. / G – Gays: homens que se relacionam com homens. / B – Bissexuais: atração por mais de um gênero. / T – Transgêneros: identidade de gênero diferente do sexo de nascimento. / Q – Queer/Questionando: quem desafia ou explora as normas de gênero e sexualidade. / I – Intersexo: nascem com características biológicas de ambos os sexos. / A – Assexuais/Aliados: quem não sente atração sexual ou apoia a causa. / + – Outras identidades: pansexual, não binário, agênero, entre outras.'
     }
 ]
@@ -88,7 +88,7 @@ export const infosDireitos = [
     },
     {
         title: 'Legislação Específica',
-        content: 'Muitas regiões possuem leis específicas que protegem os direitos das pessoas LGBTQIA+, garantindo proteção contra discriminação e violência.'
+        content: 'Muitas regiões possuem leis específicas que protegem os direitos das pessoas LGBTQIAPN+, garantindo proteção contra discriminação e violência.'
     },
     {
         title: 'Acesso à Justiça',
@@ -98,15 +98,15 @@ export const infosDireitos = [
 export const infosLgbtfobia = [
     {
         title: 'Como identificar a LGBTfobia',
-        content: 'A LGBTfobia se manifesta de várias formas, desde piadas e comentários que ridicularizam pessoas LGBTQIA+, até exclusão ou tratamento desigual por orientação sexual ou identidade de gênero. Também inclui agressões verbais ou físicas motivadas pelo preconceito, assim como microagressões sutis que reforçam estereótipos. Reconhecer esses sinais é o primeiro passo para combatê-la.'
+        content: 'A LGBTfobia se manifesta de várias formas, desde piadas e comentários que ridicularizam pessoas LGBTQIAPN+, até exclusão ou tratamento desigual por orientação sexual ou identidade de gênero. Também inclui agressões verbais ou físicas motivadas pelo preconceito, assim como microagressões sutis que reforçam estereótipos. Reconhecer esses sinais é o primeiro passo para combatê-la.'
     },
     {
         title: 'Quebrando falsos mitos',
-        content: 'Existem muitos mitos sobre a comunidade LGBTQIA+, como a ideia de que ser LGBTQIA+ é uma escolha, que casais do mesmo sexo não formam famílias reais ou que pessoas trans estão “confusas” sobre sua identidade. Na verdade, a orientação sexual e a identidade de gênero são naturais, famílias LGBTQIA+ oferecem amor e cuidado como qualquer outra, e pessoas trans têm sua identidade real e legítima.'
+        content: 'Existem muitos mitos sobre a comunidade LGBTQIAPN+, como a ideia de que ser LGBTQIAPN+ é uma escolha, que casais do mesmo sexo não formam famílias reais ou que pessoas trans estão “confusas” sobre sua identidade. Na verdade, a orientação sexual e a identidade de gênero são naturais, famílias LGBTQIAPN+ oferecem amor e cuidado como qualquer outra, e pessoas trans têm sua identidade real e legítima.'
     },
     {
         title: 'Informações verídicas sobre a comunidade',
-        content: 'A comunidade LGBTQIA+ é diversa, englobando várias orientações sexuais e identidades de gênero. Infelizmente, seus integrantes enfrentam mais discriminação e violência, tornando essencial políticas de proteção e inclusão. Apoiar a comunidade significa respeitar seus direitos, usar os pronomes corretos e combater o preconceito no dia a dia.'
+        content: 'A comunidade LGBTQIAPN+ é diversa, englobando várias orientações sexuais e identidades de gênero. Infelizmente, seus integrantes enfrentam mais discriminação e violência, tornando essencial políticas de proteção e inclusão. Apoiar a comunidade significa respeitar seus direitos, usar os pronomes corretos e combater o preconceito no dia a dia.'
     }
 ]
 

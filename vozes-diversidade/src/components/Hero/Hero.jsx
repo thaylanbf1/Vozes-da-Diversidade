@@ -7,7 +7,7 @@ const Hero = ({onNavigate}) => {
     <section className="hero">
         <div className="hero-content">
             <h1>Um espaço seguro para sua voz</h1>
-            <p>Plataforma de denúncia anônima e apoio inetegral a Comunidade LGBTQIA+ em Ananindeua e regiões no Pará</p>
+            <p>Plataforma de denúncia anônima e apoio inetegral a Comunidade LGBTQIAPN+ em Ananindeua e regiões no Pará</p>
         </div>
         <div className="hero-buttons">
             <button className='btn btn-primary' onClick={() => onNavigate('report')}>
